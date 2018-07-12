@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #dedede;
+        }
+        .box {
+            width: 800px;
+            margin-top: 50px;
+            margin-left: 300px;
+            position: relative;
+        }
+        .box div {
+            width: 800px;
+            height: 500px;
+        }
+        .box div:nth-child(1) {
+            overflow: hidden;
+            background-color: #fff;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            transition: 3s;
+        }
+        .box > div:nth-child(1) div {
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        .box > div:nth-child(1) img {
+            margin-top: 20px;
+            width: 720px;
+            height: 350px;
+        }
+        .box div:nth-child(2) {      
+            background: url("img/07.jpg") no-repeat;
+            background-size: 100% 100%;
+            backface-visibility: hidden;     
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 3s;
+        }
+        .box:hover div:nth-child(2) {
+            transform: rotateY(180deg);
+        }
+        .box:hover div:nth-child(1) {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <div>
+                <h2>2018年07月12日</h2> 
+                <span>地平线 . 零之曙光 游戏高清图片</span> 
+                <img src="img/05.jpg" alt="">
+            </div>      
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>
